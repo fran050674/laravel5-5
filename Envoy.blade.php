@@ -1,6 +1,7 @@
-@servers(['web' => 'admin@37.187.109.143'])
+@servers(['laravel5-5' => 'admin@37.187.109.143'])
 
-@task('list', ['on' => 'web'])
-    cd /home/admin/projects
-    ls -la
+@task('deploy', ['on' => 'laravel5-5'])
+    cd /home/admin/projects/laravel5-5
+    git pull origin master
+    composer install
 @endtask
